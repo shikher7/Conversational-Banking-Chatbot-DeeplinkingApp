@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/calibri"
+            android:text="Send money"
+            android:textColor="#171D33"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/calibri"
+                android:text="Amount"
+                android:textColor="#171D33"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.tobiasschuerg.prefixsuffix.PrefixSuffixEditText
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:width="150dp"
+                android:fontFamily="@font/calibri"
+                android:gravity="center"
+                android:inputType="number"
+                android:text="99.99"
+                android:layout_marginStart="16dp"
+                android:textColor="#171D33"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:prefix="₹" />
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/paymentTabLayout"
+                    style="@style/CustomTab"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="8dp"
+                    app:tabGravity="fill"
+                    app:tabIndicatorColor="#FF7D00"
+                    app:tabIndicatorHeight="2dp"
+                    app:tabMaxWidth="0dp"
+                    app:tabMode="fixed"
+                    app:tabSelectedTextColor="@color/black"
+                    app:tabTextColor="#A6AAB4" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@+id/appBarLayout"
+            tools:layout_editor_absoluteX="16dp" />
+
+        <Button
+            android:id="@+id/button"
+            style="@style/ButtonActionStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="Add new Contact" />
+    </LinearLayout>
+
+</layout>
