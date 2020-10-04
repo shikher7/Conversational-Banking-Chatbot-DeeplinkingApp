@@ -14,9 +14,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
-            android:fontFamily="@font/calibri"
             android:text="Account Details"
             android:textColor="#171D33"
+            android:fontFamily="@font/calibri"
             android:textSize="28sp"
             android:textStyle="bold" />
 

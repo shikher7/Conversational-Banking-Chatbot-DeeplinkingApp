@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/hsbc_logo" />
+
+    <TextView
+        android:id="@+id/welcome_text"
+        android:layout_width="256dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/profile_image"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/calibri"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="Welcome"
+        android:textColor="#171D33"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/profile_name"
+        android:layout_width="256dp"
+        android:layout_below="@id/welcome_text"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/calibri"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="John Flint"
+        android:textColor="#171D33"
+        android:textSize="20sp"
+       />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/indicator_dots_layout"
+        android:layout_width="185dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/profile_name"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginVertical="16dp"
+        android:background="@color/greyish">
+
+        <com.andrognito.pinlockview.IndicatorDots
+            android:id="@+id/indicator_dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.andrognito.pinlockview.PinLockView
+        android:id="@+id/pin_lock_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/indicator_dots_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        app:keypadButtonSize="72dp"
+        app:keypadShowDeleteButton="true"
+        app:keypadTextColor="@color/white"
+        app:keypadTextSize="18dp" />
+
+</RelativeLayout>

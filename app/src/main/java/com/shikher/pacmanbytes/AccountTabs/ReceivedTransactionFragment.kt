@@ -15,6 +15,9 @@ import com.shikher.pacmanbytes.R
 import kotlinx.android.synthetic.main.fragment_payement_tab1.*
 
 class ReceivedTransactionFragment: Fragment(){
+    val transaction7 = TransactionModel("Send","1000","UPI","KFC")
+    val transaction8 = TransactionModel("Send","1000","UPI","KFC")
+    val transaction9 = TransactionModel("Send","1000","UPI","KFC")
     val transaction1 = TransactionModel("Receive","1000","Bank Transfer","HSBC")
     val transaction2 = TransactionModel("Receive","1000","Bank Transfer","HSBC")
     val transaction3 = TransactionModel("Receive","1000","Bank Transfer","HSBC")
@@ -35,9 +38,12 @@ class ReceivedTransactionFragment: Fragment(){
 
     private fun initView() {
         transactionArray?.add(transaction1)
+        transactionArray?.add(transaction7)
         transactionArray?.add(transaction2)
         transactionArray?.add(transaction3)
+        transactionArray?.add(transaction8)
         transactionArray?.add(transaction4)
+        transactionArray?.add(transaction9)
         transactionArray?.add(transaction5)
         transactionArray?.add(transaction6)
         val llm = LinearLayoutManager(context)
