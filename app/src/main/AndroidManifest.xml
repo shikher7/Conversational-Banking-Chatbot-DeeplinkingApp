@@ -15,6 +15,11 @@
             android:theme="@style/DashboardTheme">
 
         </activity>
+        <activity
+            android:name=".BalanceActivity"
+            android:theme="@style/DashboardTheme">
+
+        </activity>
         <activity android:name=".MainActivity"></activity>
         <activity
             android:name=".LoginActivity"

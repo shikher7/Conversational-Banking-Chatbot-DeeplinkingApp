@@ -9,7 +9,7 @@
     </style>
 
 
-    <style name="DashboardTheme" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+    <style name="DashboardTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="android:statusBarColor">@color/colorAccent</item>
     </style>
 
