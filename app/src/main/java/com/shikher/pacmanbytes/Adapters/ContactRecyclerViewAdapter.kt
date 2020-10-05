@@ -1,18 +1,19 @@
 package com.shikher.pacmanbytes.Adapters;
 
 import android.content.Context
-import android.util.Log
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import androidx.recyclerview.widget.RecyclerView
-import com.shikher.pacmanbytes.Model.Contact
+import com.shikher.pacmanbytes.AccountDetailsActivity
+import com.shikher.pacmanbytes.Model.ContactModel
 import com.shikher.pacmanbytes.R
+import com.shikher.pacmanbytes.ReviewPaymentAcitivity
 import kotlinx.android.synthetic.main.layout_item_contact.view.*
 
 
-class ContactAdapter(private val context: Context, private  val items: ArrayList<Contact>):RecyclerView.Adapter<ContactAdapter.ContactListViewHolder>(){
+class ContactAdapter(private val context: Context, private  val items: ArrayList<ContactModel>):RecyclerView.Adapter<ContactAdapter.ContactListViewHolder>(){
 
 
 
@@ -39,7 +40,10 @@ class ContactAdapter(private val context: Context, private  val items: ArrayList
             holder.phone.text = items[position].phone
         if(items[position].account.isNotEmpty())
             holder.account.text = items[position].account
-
+        holder.layout.setOnClickListener {
+            val intent = Intent(it.context, ReviewPaymentAcitivity::class.java)
+            context.startActivity(intent)
+        }
     }
 
 }

@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="24dp"
-            android:text="Account Details"
+            android:text="Hi John Smith ! "
             android:textColor="#171D33"
             android:fontFamily="@font/calibri"
             android:textSize="28sp"
@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:text="Savings Account: 5023-05678-043-082"
+            android:text="CIN: 5023-05678-043-082"
             android:fontFamily="@font/calibri"
             android:textColor="#171D33"
             android:textSize="16sp"
@@ -37,48 +37,32 @@
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
             android:fontFamily="@font/calibri"
             android:gravity="center"
             android:inputType="number"
-            android:text="₹ 99,000.00"
+            android:text="Choose an account"
             android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+
             android:textColor="#171D33"
-            android:textSize="28sp"
+            android:textSize="24sp"
             android:textStyle="bold"/>
 
-        <com.google.android.material.appbar.AppBarLayout
-            android:id="@+id/appBarLayout"
+       <View
+           android:layout_width="match_parent"
+           android:layout_height="1dp"
+           android:layout_marginVertical="16dp"
+           android:background="@color/greyish"
+           />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/accountListRecyclerView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView4">
-
-            <com.google.android.material.tabs.TabLayout
-                android:id="@+id/paymentTabLayout"
-                style="@style/CustomTab"
-                android:background="#DAD8D8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:tabGravity="fill"
-                app:tabIndicatorColor="@color/colorAccent"
-                app:tabIndicatorHeight="3dp"
-                app:tabMaxWidth="0dp"
-                app:tabMode="fixed"
-                app:tabSelectedTextColor="@color/black"
-                app:tabTextColor="@color/white" />
-
-        </com.google.android.material.appbar.AppBarLayout>
-
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/viewPager"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="@+id/appBarLayout"
-            tools:layout_editor_absoluteX="16dp" />
+            tools:layout_editor_absoluteY="109dp" />
 
 
     </LinearLayout>

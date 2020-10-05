@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 30
@@ -12,7 +13,6 @@ android {
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -28,6 +28,12 @@ android {
     packagingOptions {
         exclude 'META-INF/library_release.kotlin_module'
     }
+    kapt {
+        arguments {
+            arg("deepLink.incremental", "true")
+            arg("deepLink.customAnnotations", "com.airbnb.AppDeepLink,com.airbnb.WebDeepLink")
+        }
+    }
 }
 
 dependencies {
@@ -42,8 +48,10 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     implementation 'com.github.tobiasschuerg:android-prefix-suffix-edit-text:1.3.1'
     implementation 'com.andrognito.pinlockview:pinlockview:2.1.0'
+    implementation 'com.github.cdflynn:checkview:v1.1'
     implementation 'co.infinum:goldfinger:2.0.1'
-
+    implementation 'com.airbnb:deeplinkdispatch:5.2.0'
+    kapt 'com.airbnb:deeplinkdispatch-processor:5.2.0'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 

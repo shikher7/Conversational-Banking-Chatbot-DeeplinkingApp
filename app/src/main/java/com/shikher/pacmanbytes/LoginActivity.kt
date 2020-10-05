@@ -78,22 +78,7 @@ class LoginActivity: AppCompatActivity() {
 
     }
 
-    private fun showMessage(message: String) {
-        Toast
-            .makeText(
-                this,
-                message,
-                Toast.LENGTH_SHORT
-            )
-            .show()
-    }
 
-    private fun gotoHomePage(message: String) {
-        val intent = Intent(this, BalanceActivity::class.java)
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
-        startActivity(intent)
-        finish()
-    }
 
     override fun onResume() {
         super.onResume()
@@ -130,5 +115,22 @@ class LoginActivity: AppCompatActivity() {
                     }
                 )
 
+    }
+
+    private fun showMessage(message: String) {
+        Toast
+            .makeText(
+                this,
+                message,
+                Toast.LENGTH_SHORT
+            )
+            .show()
+    }
+
+    private fun gotoHomePage(message: String) {
+        val intent = Intent(this, AccountListActivity::class.java)
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+        startActivity(intent)
+        finish()
     }
 }

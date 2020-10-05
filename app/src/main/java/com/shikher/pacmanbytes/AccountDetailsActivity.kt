@@ -1,20 +1,22 @@
 package com.shikher.pacmanbytes
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 import androidx.viewpager.widget.ViewPager
 import com.airbnb.deeplinkdispatch.DeepLink
 import com.google.android.material.tabs.TabLayout
+import com.shikher.pacmanbytes.AccountTabs.AccountInfoFragment
+import com.shikher.pacmanbytes.AccountTabs.TransactionListFragment
 import com.shikher.pacmanbytes.Adapters.TabLayoutAdapter
-import com.shikher.pacmanbytes.PaymentTabs.PaymentTab1Fragment
-import com.shikher.pacmanbytes.PaymentTabs.PaymentTab2Fragment
+import kotlinx.android.synthetic.main.activity_balance.*
 import kotlinx.android.synthetic.main.activity_payment.*
+import kotlinx.android.synthetic.main.activity_payment.paymentTabLayout
+import kotlinx.android.synthetic.main.activity_payment.textView4
+import kotlinx.android.synthetic.main.activity_payment.viewPager
 
-//@DeepLink("https://pacmanbytes.com?id=skjdbgfksd&accessToken")
-
-class PaymentActivity : AppCompatActivity(), TabLayout.OnTabSelectedListener {
-    private val tab1Fragment = PaymentTab1Fragment()
-    private val tab2Fragment = PaymentTab2Fragment()
+class AccountDetailsActivity : AppCompatActivity(), TabLayout.OnTabSelectedListener {
+    private val tab1Fragment = TransactionListFragment()
+    private val tab2Fragment = AccountInfoFragment()
     private var  id:String? =""
     private var  accessCode:String? =""
     private var  amount:String? =""
@@ -22,15 +24,13 @@ class PaymentActivity : AppCompatActivity(), TabLayout.OnTabSelectedListener {
     private var  fromAccount:String? =""
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_payment)
+        setContentView(R.layout.activity_balance)
         intiView()
     }
 
     private fun intiView() {
-        val intent = intent
         if (intent.getBooleanExtra(DeepLink.IS_DEEP_LINK, false)) {
             val parameters = intent.extras
             id = parameters!!.getString("id")
@@ -47,8 +47,8 @@ class PaymentActivity : AppCompatActivity(), TabLayout.OnTabSelectedListener {
 
     private fun SetupViewPager(viewPager: ViewPager): ViewPager {
         val adapter = TabLayoutAdapter(supportFragmentManager)
-        adapter.addFragment(tab1Fragment, "UPI Transfer")
-//        adapter.addFragment(tab2Fragment, "Bank Transfer")
+        adapter.addFragment(tab1Fragment, "Transactions")
+        adapter.addFragment(tab2Fragment, "Account Info")
         viewPager.adapter = adapter
         return viewPager
     }
@@ -63,5 +63,3 @@ class PaymentActivity : AppCompatActivity(), TabLayout.OnTabSelectedListener {
     override fun onTabReselected(tab: TabLayout.Tab?) {
     }
 }
-
-

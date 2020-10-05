@@ -21,7 +21,7 @@
             android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/fromAccount"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -41,7 +41,7 @@
                 android:width="150dp"
                 android:fontFamily="@font/calibri"
                 android:gravity="center"
-                android:inputType="number"
+                android:inputType="numberDecimal"
                 android:text="99.99"
                 android:layout_marginStart="16dp"
                 android:textColor="#171D33"
@@ -62,16 +62,17 @@
                 <com.google.android.material.tabs.TabLayout
                     android:id="@+id/paymentTabLayout"
                     style="@style/CustomTab"
+                    android:background="#DAD8D8"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:paddingHorizontal="8dp"
                     app:tabGravity="fill"
-                    app:tabIndicatorColor="#FF7D00"
-                    app:tabIndicatorHeight="2dp"
+                    app:tabIndicatorFullWidth="true"
+                    app:tabIndicatorColor="@color/colorAccent"
+                    app:tabIndicatorHeight="0dp"
                     app:tabMaxWidth="0dp"
                     app:tabMode="fixed"
                     app:tabSelectedTextColor="@color/black"
-                    app:tabTextColor="#A6AAB4" />
+                    app:tabTextColor="@color/white"  />
 
             </com.google.android.material.appbar.AppBarLayout>
 
@@ -82,16 +83,7 @@
             app:layout_constraintTop_toTopOf="@+id/appBarLayout"
             tools:layout_editor_absoluteX="16dp" />
 
-        <Button
-            android:id="@+id/button"
-            style="@style/ButtonActionStyle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginStart="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginBottom="16dp"
-            android:text="Add new Contact" />
+
     </LinearLayout>
 
 </layout>

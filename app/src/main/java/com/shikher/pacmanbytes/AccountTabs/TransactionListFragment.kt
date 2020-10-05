@@ -1,20 +1,17 @@
 package com.shikher.pacmanbytes.AccountTabs
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.shikher.pacmanbytes.Adapters.ContactAdapter
 import com.shikher.pacmanbytes.Adapters.TransactionRecyclerViewAdapter
-import com.shikher.pacmanbytes.Model.Contact
 import com.shikher.pacmanbytes.Model.TransactionModel
 import com.shikher.pacmanbytes.R
 import kotlinx.android.synthetic.main.fragment_payement_tab1.*
 
-class ReceivedTransactionFragment: Fragment(){
+class TransactionListFragment: Fragment(){
     val transaction7 = TransactionModel("Send","1000","UPI","KFC")
     val transaction8 = TransactionModel("Send","1000","UPI","KFC")
     val transaction9 = TransactionModel("Send","1000","UPI","KFC")
