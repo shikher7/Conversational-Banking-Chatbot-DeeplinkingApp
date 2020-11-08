@@ -17,7 +17,7 @@
         android:padding="16dp">
 
         <TextView
-            android:id="@+id/transaction_amount"
+            android:id="@+id/TRANSACTION_AMT_VIEW"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/calibri"
@@ -38,41 +38,41 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/merchant_name"
+            android:id="@+id/MERCHANT_TYPE_VIEW"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:fontFamily="@font/calibri"
+            android:text="MERCHANT_TYPE"
             android:textColor="#171D33"
             android:textSize="16sp"
-            android:text="Name"
             app:layout_constraintStart_toEndOf="@+id/transaction_type_img"
             app:layout_constraintTop_toTopOf="@+id/transaction_type_img" />
 
 
         <TextView
-            android:id="@+id/transaction_type"
+            android:id="@+id/TRANSACTION_TIME_VIEW"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:fontFamily="@font/calibri"
+            android:text="TRANSACTION_TIME"
             android:textColor="#171D33"
             android:textSize="16sp"
-            android:text="type"
-            app:layout_constraintStart_toStartOf="@+id/merchant_name"
-            app:layout_constraintTop_toBottomOf="@+id/merchant_name" />
+            app:layout_constraintStart_toStartOf="@+id/MERCHANT_TYPE_VIEW"
+            app:layout_constraintTop_toBottomOf="@+id/MERCHANT_TYPE_VIEW" />
 
         <TextView
-            android:id="@+id/transaction_timestamp"
+            android:id="@+id/TRANSACTION_DETAIL_VIEW"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
             android:fontFamily="@font/calibri"
+            android:text="TRANSACTION_DETAIL"
             android:textColor="#171D33"
             android:textSize="16sp"
-            android:text="timestamp"
-            app:layout_constraintStart_toStartOf="@+id/merchant_name"
-            app:layout_constraintTop_toBottomOf="@+id/transaction_type" />
+            app:layout_constraintStart_toStartOf="@+id/MERCHANT_TYPE_VIEW"
+            app:layout_constraintTop_toBottomOf="@+id/TRANSACTION_TIME_VIEW" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

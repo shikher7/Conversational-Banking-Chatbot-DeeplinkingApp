@@ -6,19 +6,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.shikher.pacmanbytes.AccountDetailsActivity
 import com.shikher.pacmanbytes.Model.ContactModel
+import com.shikher.pacmanbytes.PaymentActivity
 import com.shikher.pacmanbytes.R
 import com.shikher.pacmanbytes.ReviewPaymentAcitivity
 import kotlinx.android.synthetic.main.layout_item_contact.view.*
 
 
-class ContactAdapter(private val context: Context, private  val items: ArrayList<ContactModel>):RecyclerView.Adapter<ContactAdapter.ContactListViewHolder>(){
+class ContactAdapter(private val context: Context, private val items: ArrayList<ContactModel>):RecyclerView.Adapter<ContactAdapter.ContactListViewHolder>(){
 
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ContactListViewHolder (
-        LayoutInflater.from(context).inflate(R.layout.layout_item_contact, parent, false))
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ContactListViewHolder(
+        LayoutInflater.from(context).inflate(R.layout.layout_item_contact, parent, false)
+    )
 
     override fun getItemCount(): Int {
         return items.size
@@ -41,8 +42,8 @@ class ContactAdapter(private val context: Context, private  val items: ArrayList
         if(items[position].account.isNotEmpty())
             holder.account.text = items[position].account
         holder.layout.setOnClickListener {
-            val intent = Intent(it.context, ReviewPaymentAcitivity::class.java)
-            context.startActivity(intent)
+            (context as PaymentActivity).onClickCalled("UPI Payment",items[position].account,items[position].name)
+
         }
     }
 

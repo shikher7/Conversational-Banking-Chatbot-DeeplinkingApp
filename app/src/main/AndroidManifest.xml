@@ -16,7 +16,8 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="https"
-                    android:host="www.pacmanbytes.com"/>
+                    android:host="www.pacmanbytes.com"
+                    />
             </intent-filter>
         </activity>
         <activity
@@ -25,10 +26,27 @@
         <activity
             android:name=".PaymentActivity"
             android:theme="@style/DashboardTheme">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.VIEW" />-->
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--                <category android:name="android.intent.category.BROWSABLE" />-->
+<!--                <data android:scheme="https"-->
+<!--                    android:host="www.pacmanbytes.com"-->
+<!--                    android:path="/payment"/>-->
+<!--            </intent-filter>-->
         </activity>
         <activity
             android:name=".AccountDetailsActivity"
-            android:theme="@style/DashboardTheme" />
+            android:theme="@style/DashboardTheme" >
+<!--        <intent-filter>-->
+<!--            <action android:name="android.intent.action.VIEW" />-->
+<!--            <category android:name="android.intent.category.DEFAULT" />-->
+<!--            <category android:name="android.intent.category.BROWSABLE" />-->
+<!--            <data android:scheme="https"-->
+<!--                android:host="www.pacmanbytes.com"-->
+<!--                android:path="/account_details"/>-->
+<!--        </intent-filter>-->
+        </activity>
         <activity
             android:name=".AccountListActivity"
             android:theme="@style/DashboardTheme" />

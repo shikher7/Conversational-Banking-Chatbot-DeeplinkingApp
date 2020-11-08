@@ -38,7 +38,7 @@
         android:fontFamily="@font/calibri"
         android:gravity="center"
         android:maxLines="1"
-        android:text="John Flint"
+        android:text="user1 name1"
         android:textColor="#171D33"
         android:textSize="20sp"
        />

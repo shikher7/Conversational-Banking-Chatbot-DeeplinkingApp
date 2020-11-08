@@ -9,12 +9,9 @@ import kotlinx.android.synthetic.main.activity_account_list.*
 import kotlinx.android.synthetic.main.fragment_payement_tab1.*
 
 class AccountListActivity : AppCompatActivity() {
-    private val account1 = AccountModel("123","1000","Savings")
-    private val account2 = AccountModel("123","12000","Credit")
-    private val account3 = AccountModel("123","1000","Savings")
-    private val account4 = AccountModel("123","1000","Savings")
-    private val account5 = AccountModel("123","1000","Savings")
-    private val account6 = AccountModel("123","1000","Savings")
+    private val account1 = AccountModel("118483","₹ 100000","SAVINGS")
+    private val account2 = AccountModel("490581","₹ 150000","CREDIT")
+
 
     private var accountArray: ArrayList<AccountModel>? =ArrayList<AccountModel>()
 
@@ -27,10 +24,6 @@ class AccountListActivity : AppCompatActivity() {
     private fun intiView() {
         accountArray?.add(account1)
         accountArray?.add(account2)
-        accountArray?.add(account3)
-        accountArray?.add(account4)
-        accountArray?.add(account5)
-        accountArray?.add(account6)
         val llm = LinearLayoutManager(this)
         llm.orientation = LinearLayoutManager.VERTICAL
         accountListRecyclerView?.layoutManager = llm
