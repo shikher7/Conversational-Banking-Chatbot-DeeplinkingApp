@@ -1,6 +1,6 @@
-# PacManBytes
+# Conversational-Banking-Chatbot-DeeplinkingApp
 
-## Current Screens Added -
+## Current journeys for deeplinking with chatbot -
 
 ### 1. Account Details Screen -
  ##### - Show balance
@@ -13,6 +13,3 @@
  ##### - Search Contact
  ##### - Add new contact button
  
-## TODO (Write upcoming pending tasks)
-
- for example - Establish connection using Retrofit
